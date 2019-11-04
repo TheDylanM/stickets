@@ -1,33 +1,38 @@
 <template>
   <v-app>
-<!--    <v-app-bar app>-->
-<!--      <v-toolbar-title class="headline text-uppercase">-->
-<!--        <span>Smarter tickets</span>-->
-<!--      </v-toolbar-title>-->
-<!--    </v-app-bar>-->
+    <!--    <v-app-bar app>-->
+    <!--      <v-toolbar-title class="headline text-uppercase">-->
+    <!--        <span>Smarter tickets</span>-->
+    <!--      </v-toolbar-title>-->
+    <!--    </v-app-bar>-->
 
-    <v-content class="content">
+    <v-content :class="{ 'bckg-img': showBackgroundImage }">
       <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-  import '@/scss/styling.scss'
+import '@/scss/styling.scss';
 export default {
-  name: "App",
+  name: 'App',
   components: {},
   data: () => ({
     //
   }),
   mounted() {
-    this.$router.push({name: 'createAccount'})
-  }
+    this.$router.push({ name: 'home' });
+  },
+  computed: {
+    showBackgroundImage() {
+      return this.$route.name === 'login' || this.$route.name === 'createAccount';
+    },
+  },
 };
 </script>
 
 <style>
-.content{
-    background-image: url("assets/side_background.png");
+.bckg-img {
+  background-image: url('assets/side_background.png');
 }
 </style>
