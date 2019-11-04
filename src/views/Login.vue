@@ -25,7 +25,9 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-btn :ripple="false" block large color="primary">Login</v-btn>
+            <v-btn :to="{ name: 'home' }" block large color="primary">
+              Login
+            </v-btn>
           </v-col>
         </v-row>
         <v-row>

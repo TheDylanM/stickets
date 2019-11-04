@@ -14,7 +14,7 @@
           <v-text-field label="Email"></v-text-field>
           <v-text-field label="Password"></v-text-field>
           <v-text-field label="Repeat password"></v-text-field>
-          <v-btn block color="primary" @click="isCreatingAccount = true">Create</v-btn>
+          <v-btn block color="primary" @click="createAccount()">Create</v-btn>
           <div class="text-left pt-2">
             <a href="#">Already have an account?</a>
           </div>
@@ -24,7 +24,7 @@
     <v-card v-else width="540px" class="creating-account-card pa-6">
       <v-row justify="end">
         <v-col class="shrink">
-          <v-btn color="primary" text>
+          <v-btn :to="{ name: 'login' }" color="primary" text>
             Login
             <v-icon right>
               arrow_forward
@@ -66,6 +66,11 @@ export default {
     return {
       isCreatingAccount: false,
     };
+  },
+  methods: {
+    createAccount() {
+      this.isCreatingAccount = true;
+    },
   },
 };
 </script>
