@@ -58,7 +58,7 @@ export default {
 
   .content {
     padding-bottom: 30px;
-    background: green;
+    background: $login-form-background-color;
   }
 
   .row-anchor {
