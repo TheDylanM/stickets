@@ -21,7 +21,7 @@ export default {
     //
   }),
   mounted() {
-    this.$router.push({ name: 'home' });
+    this.$router.push({ name: 'createAccount' });
   },
   computed: {
     showBackgroundImage() {

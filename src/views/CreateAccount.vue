@@ -14,7 +14,7 @@
           <v-text-field label="Email"></v-text-field>
           <v-text-field label="Password"></v-text-field>
           <v-text-field label="Repeat password"></v-text-field>
-          <v-btn block color="primary">Create</v-btn>
+          <v-btn block color="primary" @click="isCreatingAccount = true">Create</v-btn>
           <div class="text-left pt-2">
             <a href="#">Already have an account?</a>
           </div>
@@ -64,7 +64,7 @@ export default {
   name: 'CreateAccount',
   data() {
     return {
-      isCreatingAccount: true,
+      isCreatingAccount: false,
     };
   },
 };
