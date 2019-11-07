@@ -4,15 +4,17 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login';
 import CreateAccount from '../views/CreateAccount';
 import CreateTicket from '../views/CreateTicket';
+import Dashboard from "../views/Dashboard";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: '',
+    component: Home,
     children: [
-      { path: '', component: Home },
+      { path: '', component: Dashboard },
       { path: '/create-ticket', component: CreateTicket },
     ],
   },

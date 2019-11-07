@@ -1,4 +1,6 @@
-<template> <v-container></v-container></template>
+<template>
+    <v-container>Testing create ticket route</v-container>
+</template>
 
 <script>
 export default {

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'vuetify';
+@import 'ag-grid';
 
 .pointer {
   cursor: pointer;
@@ -8,20 +9,20 @@
 .primary-color--text {
   color: $color-primary !important;
 }
-.white-text-color{
-  color:white !important;
+.white-text-color {
+  color: white !important;
 }
 
 .theme--light.v-navigation-drawer,
 .side-navigation-bar {
   background-color: $sid-nav-color-primary !important;
 }
-.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled){
+.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
   border-radius: 0 30px 30px 0;
   width: 99%;
 }
 
-.activeItem{
+.activeItem {
   background-color: white;
   color: teal;
 }

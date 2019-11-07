@@ -1,16 +1,14 @@
 <template>
-  <v-container>
-    <v-row>
-      <p>Testing paragraph</p>
-    </v-row>
-  </v-container>
+  <div>
+      <router-view/>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
 export default {
-  name: 'home',
-  components: {},
+  name: 'Home',
+
 };
 </script>

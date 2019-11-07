@@ -8,7 +8,7 @@ export default new Vuex.Store({
     ui: {
       isLoggedIn: true,
       sideNavigationItems: [
-        { title: 'Home', route: '', icon: 'mdi-home-city' },
+        { title: 'Dashboard', route: '', icon: 'mdi-home-city' },
         { title: 'Tickets', route: '', icon: 'mdi-account' },
         { title: 'Projects', route: '', icon: 'mdi-account' },
         {
@@ -17,7 +17,7 @@ export default new Vuex.Store({
           icon: 'mdi-account-group-outline',
         },
       ],
-      activeItem: 'Home'
+      activeItem: 'Dashboard'
     },
   },
   getters: {
