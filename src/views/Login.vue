@@ -19,8 +19,16 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-text-field label="Username"></v-text-field>
-            <v-text-field label="Password"></v-text-field>
+            <v-text-field
+              v-model="inputUsername"
+              type="text"
+              label="Username"
+            ></v-text-field>
+            <v-text-field
+              v-model="inputPassword"
+              type="password"
+              label="Password"
+            ></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -33,8 +41,8 @@
         <v-row>
           <v-col>
             <div class="row-anchor">
-              <a href="#">Create account</a>
-              <a href="#">Forgot password?</a>
+              <a href="/create-account">Create account</a>
+              <a href="/forgot-password">Forgot password?</a>
             </div>
           </v-col>
         </v-row>
@@ -48,6 +56,12 @@ import eugLogo from '@/assets/eug_logo.svg';
 export default {
   name: 'Login',
   components: { eugLogo },
+  data() {
+    return {
+      inputUsername: null,
+      inputPassword: null,
+    };
+  },
 };
 </script>
 
