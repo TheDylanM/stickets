@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login';
 import CreateAccount from '../views/CreateAccount';
 import CreateTicket from '../views/CreateTicket';
-import Dashboard from "../views/Dashboard";
+import Dashboard from '../views/Dashboard';
 
 Vue.use(VueRouter);
 
