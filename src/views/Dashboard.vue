@@ -9,6 +9,7 @@
           class="ag-theme-balham"
           :columnDefs="columnDefs"
           :rowData="rowData"
+          rowSelection="multiple"
         >
         </ag-grid-vue>
       </v-col>
@@ -19,28 +20,20 @@
 <script>
 // @ is an alias to /src
 import { AgGridVue } from 'ag-grid-vue';
+import ColumnMapping from "../utils/ColumnMapping";
+import DummyData from "../utils/DummyData";
 
 export default {
   name: 'Dashboard',
   components: { AgGridVue },
   data() {
     return {
-      columnDefs: null,
-      rowData: null,
+      columnDefs: ColumnMapping,
+      rowData: DummyData,
     };
   },
   beforeMount() {
-    this.columnDefs = [
-      { headerName: 'Make', field: 'make' },
-      { headerName: 'Model', field: 'model' },
-      { headerName: 'Price', field: 'price' },
-    ];
 
-    this.rowData = [
-      { make: 'Toyota', model: 'Celica', price: 35000 },
-      { make: 'Ford', model: 'Mondeo', price: 32000 },
-      { make: 'Porsche', model: 'Boxter', price: 72000 },
-    ];
   },
 };
 </script>

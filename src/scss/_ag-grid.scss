@@ -1,7 +1,15 @@
-@import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import '~ag-grid-community/dist/styles/ag-grid.css';
+@import '~ag-grid-community/dist/styles/ag-theme-balham.css';
 
-.ag-theme-balham{
+.ag-theme-balham {
   width: 100%;
   height: 500px;
+
+  .ag-row-selected {
+    background-color: $ag-grid-selected-row;
+  }
+  .ag-cell .ag-icon {
+    align-items: center;
+    display: flex;
+  }
 }
